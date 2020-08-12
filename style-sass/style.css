@@ -1,0 +1,297 @@
+@font-face {
+  font-family: Montserrat-regular;
+  src: url("../fonts/MontserratAlternates-Regular.ttf"); }
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  list-style-type: none; }
+
+html,
+body {
+  height: 100%; }
+
+html {
+  font-size: 10px; }
+
+body {
+  width: 100%;
+  font-family: Montserrat-regular; }
+
+.body_hidden {
+  overflow: hidden; }
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px; }
+
+.aside-button {
+  top: 10px;
+  z-index: 2;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  border-radius: 50%;
+  background-color: #8b2d9b; }
+  .aside-button__span:first-child {
+    width: 10px;
+    height: 2px;
+    position: absolute;
+    top: calc(50% - 1px);
+    left: calc(50% - 5px);
+    background-color: #fff; }
+  .aside-button__span:last-child {
+    width: 2px;
+    height: 10px;
+    position: absolute;
+    top: calc(50% - 5px);
+    left: calc(50% - 1px);
+    background-color: #fff; }
+  .aside-button:hover {
+    cursor: pointer;
+    background-color: #fff;
+    box-sizing: border-box;
+    border: 1px solid #8b2d9b; }
+  .aside-button:hover .aside-button__span:first-child {
+    background-color: #8b2d9b; }
+  .aside-button:hover .aside-button__span:last-child {
+    background-color: #8b2d9b; }
+
+.authors-button {
+  top: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 2rem; }
+  .authors-button:hover {
+    font-weight: 700;
+    color: #8b2d9b; }
+
+.page-wrapper {
+  display: flex;
+  min-height: 100%;
+  flex-direction: column; }
+
+.top {
+  flex-grow: 1; }
+
+.header {
+  padding: 10px;
+  box-sizing: border-box;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.24); }
+
+.logo:hover {
+  cursor: pointer; }
+.logo_first-text {
+  font-weight: 700;
+  color: #8b2d9b;
+  font-size: 1.4rem; }
+.logo_last-text {
+  color: #737373;
+  font-size: 2rem; }
+
+.book-filter {
+  padding: 10px; }
+
+.filter-author {
+  color: #8b2d9b;
+  font-size: 1.6rem; }
+  .filter-author::placeholder {
+    color: #ccc;
+    font-size: 1.4rem; }
+  .filter-author__filter {
+    padding: 10px;
+    font-size: 1.4rem;
+    border: 1px solid #8b2d9b;
+    background-color: transparent; }
+    .filter-author__filter:hover {
+      color: #fff;
+      cursor: pointer;
+      background-color: #8b2d9b; }
+
+.filter-author {
+  padding: 10px;
+  border: 1px solid #8b2d9b; }
+
+table {
+  width: 100%;
+  padding: 10px;
+  font-size: 1.6rem;
+  border-collapse: collapse; }
+  table td {
+    padding: 10px; }
+
+.book-edit-td {
+  text-align: end; }
+
+.buttons {
+  display: flex;
+  justify-content: flex-end; }
+
+.book-btn {
+  margin-right: 10px;
+  position: relative; }
+  .book-btn:first-child:after {
+    content: "";
+    top: 0;
+    right: -6px;
+    width: 2px;
+    height: 100%;
+    display: block;
+    position: absolute;
+    background-color: #8b2d9b; }
+  .book-btn:last-child {
+    margin-right: 0; }
+  .book-btn:hover {
+    cursor: pointer;
+    font-weight: 700;
+    color: #8b2d9b; }
+
+.footer {
+  padding: 10px;
+  display: flex;
+  justify-content: flex-end;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.24); }
+
+.book-edit__container {
+  top: 0;
+  left: 0;
+  width: 0;
+  bottom: 0;
+  height: 100vh;
+  position: fixed;
+  overflow: hidden;
+  font-size: 1.6rem;
+  transition: width 0.4s; }
+  .book-edit__container_open {
+    width: 100%; }
+
+.wrapper {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(139, 45, 155, 0.2); }
+
+.book-edit {
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  background-color: #fff; }
+  .book-edit__header {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    box-sizing: border-box; }
+
+.edit-form {
+  width: 100%;
+  padding: 10px; }
+
+.input-edit__container {
+  position: relative;
+  margin-bottom: 30px; }
+  .input-edit__container:last-child {
+    margin-bottom: 0; }
+
+.edit-input {
+  padding: 10px;
+  border: 1px solid #8b2d9b; }
+
+.select-author {
+  top: 0;
+  left: 145px;
+  padding: 5px;
+  max-width: 100%;
+  position: absolute;
+  box-sizing: border-box;
+  border: 1px solid #8b2d9b; }
+
+.author-option {
+  margin-bottom: 5px; }
+
+.authors-container {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  height: 0;
+  width: 100%;
+  position: fixed;
+  overflow: hidden;
+  font-size: 1.6rem;
+  transition: height 0.3s; }
+  .authors-container_open {
+    height: 100vh; }
+
+.authors {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 70%;
+  overflow-y: auto;
+  position: absolute;
+  background-color: #fff; }
+  .authors__header {
+    padding: 10px;
+    font-size: 2rem;
+    text-align: center; }
+
+.add-author {
+  top: 10px;
+  right: 20px;
+  position: absolute; }
+
+.author-buttons {
+  display: flex; }
+
+.auth-btn:first-child {
+  margin-right: 10px; }
+.auth-btn:hover {
+  cursor: pointer;
+  font-weight: 700;
+  color: #8b2d9b; }
+
+.redactionAuthor {
+  left: 0;
+  bottom: 0;
+  width: 50%;
+  z-index: 4;
+  padding: 10px;
+  overflow: hidden;
+  position: absolute;
+  transform: scale(0);
+  background-color: #fff;
+  box-sizing: border-box;
+  transition: transform 0.4s;
+  border: 1px solid #8b2d9b; }
+  .redactionAuthor_open {
+    transform: scale(1); }
+
+.editAuthorName {
+  padding: 10px;
+  border: 1px solid #8b2d9b; }
+
+.editAuthorButtons {
+  margin-top: 10px; }
+
+.editAuthor__button {
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #8b2d9b;
+  background-color: transparent; }
+  .editAuthor__button:hover {
+    color: #fff;
+    cursor: pointer;
+    background-color: #8b2d9b; }
+
+/*# sourceMappingURL=style.css.map */
